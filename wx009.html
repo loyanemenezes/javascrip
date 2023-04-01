@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Nacionalidade</h1>
-    Sua nacionalidade é: <input type="text" name="nacx1" id="nacx1">
+    Onde você nasceu?: <input type="text" name="nacx1" id="nacx1">
     <input type="button" value="Verificar" onclick="verificar()">
     <div id="res">
 
@@ -19,7 +19,12 @@
         function verificar() {
             var nac = window.document.querySelector('input#nacx1')
             var res = window.coment.querySelector('div#res')
-            
+            if (nac != 'Brasil') {
+                document.write('Você é estrangeiro')
+            } else {
+                document.write('Você é Brasileiro')
+            }
+            res.innerHTML = `Você é Brasileiro`
         }
     </script>
 </html>
