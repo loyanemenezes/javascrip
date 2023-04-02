@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário</title>
+</head>
+<body>
+    <h1>horário</h1>
+    Que horas são agora: <input type="text" name="numb1" id="numb1">
+    <input type="button" value="Enviar" onclick="enviar()">
+    <div id="res">
+        resposta
+    </div>
+</body>
+
+    <script>
+        function enviar() {
+            var numb = window.document.querySelector('input#numb1')
+            var res = window.document.querySelector('div#res')
+            var hora = numb.value 
+            res.innerHTML = `Agora são exatamente ${hora} horas`
+            if (hora < 12) {
+                res.innerHTML += `<p>Bom Dia!</p>`
+            } else if (hora <= 18) {
+                res.innerHTML += `<p>Boa Tarde!</p>`
+            } else {
+                res.innerHTML += `<p>Boa Noite!</p>`
+            }
+        }
+    </script>
+</html>
