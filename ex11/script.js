@@ -36,7 +36,7 @@ function verificar() {
                 img.setAttribute('src', 'ftjovemmulher.png')
             } else if (idade < 50) {
                 //adulto
-                img.setAttribute('src', 'ftmulheradulto.png')
+                img.setAttribute('src', 'ftmulheradulta.png')
             } else {
                 //idoso
                 img.setAttribute('src', 'ftidosa.png')
